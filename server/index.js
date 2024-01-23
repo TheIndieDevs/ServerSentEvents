@@ -23,6 +23,7 @@ app.get('/stream', (req, res) => {
     res.write('data: hi\n\n');
     res.write('data: hi2\n\n');
     res.write('data: just testing\n\n');
+    res.write('data: just testing2\n\n');
     // You can periodically send updates using res.write('data: updated data\n\n');
 
     // Make sure to end the response when the connection is closed

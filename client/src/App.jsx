@@ -9,7 +9,10 @@ function App() {
 
   useEffect(()=> {
     const sse = new EventSource('http://localhost:3000/stream');
-    sse.onmessage = e => setServerEvent(serverEvent + " " + e.data);
+    sse.onmessage = (e) => {
+      setServerEvent(serverEvent + " " + e.data)
+      console.log(e);
+    };
 
     return () => {
       sse.close();
